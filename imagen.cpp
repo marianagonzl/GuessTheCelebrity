@@ -21,12 +21,29 @@ void random()
     cout << "Cuarta coordenada: (" << x + 100 << ", " << y - 100 << ")" << endl;
 
     return 0;
-    int Cy = rand() % 1000;
 }
 
 void juego(string nombreCeleb, int oportunidades)
 {
-    while (oportunidades <= 5)
+    for(int i=0; i<5; i++)
+    {
+        if(i=0)
+        {
+    CelebrityTexture.loadFromFile("imagenes/TaylorSwift.jpg");
+    Sprite Taylor;
+    Taylor.setTexture(TaylorTexture);
+    Taylor.setTextureRect(IntRect(0,0,x,y))
+        }
+
+ if(i=1)
+        {
+    CelebrityTexture.loadFromFile("imagenes/TaylorSwift.jpg")
+        }
+
+
+
+
+        while (oportunidades <= 5)
     {
         int resp;
         cout << "Escribe el nombre de la celebridad" << endl;
@@ -44,7 +61,7 @@ void juego(string nombreCeleb, int oportunidades)
         {
             cout << "Le atinaste kawaii" << endl;
             cout << "+ 20 pts" << endl;
-            puntuacion = -10;
+            puntuacion = +20;
             cout << "Tu puntuacion es de: " << puntuacion << endl;
         }
         if (oportunidades < 5)
@@ -52,6 +69,8 @@ void juego(string nombreCeleb, int oportunidades)
             cout << "Perdiste looser" << endl;
         }
     }
+    }
+    
 
     Imagen::Imagen()
     {

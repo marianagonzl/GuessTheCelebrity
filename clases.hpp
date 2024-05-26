@@ -31,7 +31,7 @@ private:
 public:
     string nombre;
     int getId;
-    int puntuacion;
+    int puntuacion = 50;
 
     void mostrar();
     Jugador* getUsuario(int id);
@@ -44,9 +44,9 @@ public:
 class Celebridad
 {
     public:
-    string nivel1[4] = {"TaylorSwift","KanyeWest","SelenaGomez","AdamSandler"};
+    string nivel1[5] = {"TaylorSwift","KanyeWest","SelenaGomez","AdamSandler","OliviaRodrigo"};
     string nivel2[5] = {"EmmaWatson","LeonardoDicaprio","Rihanna","TomHiddleston","HenryCavill"};
-    string nivel2[4] = {"CillianMurphy","BellaHadid","WalkerScobell","SebastianStan"};
+    string nivel2[5] = {"CillianMurphy","BellaHadid","WalkerScobell","SebastianStan","MerylStreep"};
 
 };
 

@@ -3,24 +3,23 @@
 using namespace sf;
 using namespace std;
 
-
+int x, y;
 
 int main()
 {
     RenderWindow window(VideoMode(700, 700), "Ohaio onichan!");
     window.setFramerateLimit(60);
-    Texture TaylorTexture;
+    Texture CelebrityTexture;
 
-    if(!TaylorTexture.loadFromFile("imagenes/TaylorSwift.jpg"))
+    if(!CelebrityTexture.loadFromFile("imagenes/TaylorSwift.jpg"))
     {
         cout << "Error al cargar imagen" << endl;
     }
-    TaylorTexture.setRepeated(true);
+    CelebrityTexture.setRepeated(true);
 
-    Sprite Taylor;
-    Taylor.setTexture(TaylorTexture);
-    Taylor.setTextureRect(IntRect(0, 0, Cx, cy));
-    int opacidad = 0;
+    Sprite Celebrity;
+    Celebrity.setTexture(CelebrityTexture);
+    Celebrity.setTextureRect(IntRect(0, 0, x, y));
     
     while (window.isOpen())
     {
@@ -32,8 +31,8 @@ int main()
         }
 
         window.clear(Color(51,51,51));
-        window.draw(Taylor);
-        Taylor.setColor(Color(255,255,255));
+        window.draw(Celebrity);
+        Celebrity.setColor(Color(255,255,255));
         window.display();
     }
 
