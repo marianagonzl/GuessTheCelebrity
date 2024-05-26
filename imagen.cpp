@@ -1,3 +1,6 @@
+#include <cstdlib>
+#include <ctime>
+
 #include "clases.h"
 
 void Reglas()
@@ -25,54 +28,46 @@ void random()
 
 void juego(string nombreCeleb, int oportunidades)
 {
-    for(int i=0; i<5; i++)
-    {
-        if(i=0)
-        {
-    CelebrityTexture.loadFromFile("imagenes/TaylorSwift.jpg");
-    Sprite Taylor;
-    Taylor.setTexture(TaylorTexture);
-    Taylor.setTextureRect(IntRect(0,0,x,y))
-        }
+    imagenesNivel1[0]= new Imagen("TaylorSwift","imagenes/TaylorSwift.jpg"); 
+    imagenesNivel1[1]= new Imagen("KanyeWest","imagenes/Kanye.jpg"); 
+    imagenesNivel1[2]= new Imagen("SelenaGomez","imagenes/Selena.jpg"); 
+    imagenesNivel1[3]= new Imagen("AdamSandler","imagenes/Adam.jpg"); 
+    imagenesNivel1[4]= new Imagen("OliviaRodrigo","imagenes/Olivia.jpg");    
 
- if(i=1)
-        {
-    CelebrityTexture.loadFromFile("imagenes/TaylorSwift.jpg")
-        }
-
+int imagenlol;
 
 
 
         while (oportunidades <= 5)
-    {
-        int resp;
-        cout << "Escribe el nombre de la celebridad" << endl;
-        cout << "Recuerda escribir el nombre sin espacios y en minusculas" << endl;
-        cin >> resp;
-        if (resp = !nombreDeCeleb)
         {
-            cout << "Incorrecto tilin" << endl;
-            cout << "- 10 pts" << endl;
-            puntuacion = -10;
-            oportunidades--;
-            cout << "Tienes " << oportunidades << " oportunidades " << endl;
-        }
-        else
-        {
-            cout << "Le atinaste kawaii" << endl;
-            cout << "+ 20 pts" << endl;
-            puntuacion = +20;
-            cout << "Tu puntuacion es de: " << puntuacion << endl;
-        }
-        if (oportunidades < 5)
-        {
-            cout << "Perdiste looser" << endl;
+            int resp;
+            cout << "Escribe el nombre de la celebridad" << endl;
+            cout << "Recuerda escribir el nombre sin espacios y en minusculas" << endl;
+            cin >> resp;
+            if (resp = !nombreDeCeleb)
+            {
+                cout << "Incorrecto tilin" << endl;
+                cout << "- 10 pts" << endl;
+                puntuacion = -10;
+                oportunidades--;
+                cout << "Tienes " << oportunidades << " oportunidades " << endl;
+            }
+            else
+            {
+                cout << "Le atinaste kawaii" << endl;
+                cout << "+ 20 pts" << endl;
+                puntuacion = +20;
+                cout << "Tu puntuacion es de: " << puntuacion << endl;
+            }
+            if (oportunidades < 5)
+            {
+                cout << "Perdiste looser" << endl;
+            }
         }
     }
-    }
-    
 
     Imagen::Imagen()
     {
+        
     }
-}
+

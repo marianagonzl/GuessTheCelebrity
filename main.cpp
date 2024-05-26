@@ -11,7 +11,7 @@ int main()
     window.setFramerateLimit(60);
     Texture CelebrityTexture;
 
-    if(!CelebrityTexture.loadFromFile("imagenes/TaylorSwift.jpg"))
+    if(!CelebrityTexture.loadFromFile(imagenesNivel1[imagenlol]))
     {
         cout << "Error al cargar imagen" << endl;
     }
@@ -30,9 +30,10 @@ int main()
                 window.close();
         }
 
+        void juego();
+
         window.clear(Color(51,51,51));
-        window.draw(Celebrity);
-        Celebrity.setColor(Color(255,255,255));
+        window.draw(imagenesNivel1[imagenlol]->getSprite());
         window.display();
     }
 

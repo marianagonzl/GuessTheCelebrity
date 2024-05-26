@@ -59,7 +59,7 @@ void menuJugador(Jugador *player)
 {
     int num;
 
-    cout << "Bienvenido a Famous crushes" << endl;
+    cout << "Bienvenide a Guess the Celebrity" << endl;
     inicio:
     cout << "Introduce un numero para realizar una de las siguientes acciones: " << endl;
     cout << "1. Jugar" << endl;
@@ -81,6 +81,7 @@ void menuJugador(Jugador *player)
         cout << "Ingresa una de las opciones validas" << endl;
         goto inicio;
     }
+}
 
 int main()
 {

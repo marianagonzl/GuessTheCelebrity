@@ -15,11 +15,11 @@ private:
 
 public:
     string nombreCeleb;
-    void Reglas;
+    string Reglas;
     int oportunidades;
 
     Imagen();
-    juego (string nombreCeleb, int oportunidades);
+    void juego (string nombreCeleb, int oportunidades);
 
 };
 
