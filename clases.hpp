@@ -2,6 +2,7 @@
 #define clases_h
 
 #include <iostream>
+#include <string>
 using namespace std;
 
 class Imagen
@@ -9,8 +10,8 @@ class Imagen
 private:
     void random();
     string resp;
-    int Cx;
-    int Cy;
+    int x;
+    int y;
 
 public:
     string nombreCeleb;
@@ -40,8 +41,12 @@ public:
     Jugador(string nombre, int puntuacion);
 };
 
-class Celebridad()
+class Celebridad
 {
+    public:
+    string nivel1[4] = {"TaylorSwift","KanyeWest","SelenaGomez","AdamSandler"};
+    string nivel2[5] = {"EmmaWatson","LeonardoDicaprio","Rihanna","TomHiddleston","HenryCavill"};
+    string nivel2[4] = {"CillianMurphy","BellaHadid","WalkerScobell","SebastianStan"};
 
 };
 

@@ -7,11 +7,11 @@ using namespace std;
 
 int main()
 {
-    RenderWindow window(VideoMode(800, 400), "Ohaio onichan!");
+    RenderWindow window(VideoMode(700, 700), "Ohaio onichan!");
     window.setFramerateLimit(60);
     Texture TaylorTexture;
 
-    if(!TaylorTexture.loadFromFile("assets/yoshinobg.png"))
+    if(!TaylorTexture.loadFromFile("imagenes/TaylorSwift.jpg"))
     {
         cout << "Error al cargar imagen" << endl;
     }
