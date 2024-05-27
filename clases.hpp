@@ -1,43 +1,41 @@
 #ifndef clases_h
 #define clases_h
 
+#include <SFML/Graphics.hpp>
 #include <iostream>
 #include <string>
 using namespace std;
+using namespace sf;
 
 class Imagen
 {
 private:
     void random();
     string resp;
+    string nombreCeleb;
     int x;
     int y;
+    Texture textura;
+    Sprite sprite;
 
 public:
-    string nombreCeleb;
     string Reglas;
     int oportunidades;
 
     Imagen();
+    Imagen(string nombreDeCeleb, string resp, int x, int y);
     void juego (string nombreCeleb, int oportunidades);
 
 };
 
 class Jugador
 {
-private:
-    int id;
-
 public:
     string nombre;
-    int getId;
     int puntuacion = 50;
 
     void mostrar();
-    Jugador* getUsuario(int id);
-    void mostrarUsuarios() ;
     Jugador();
-    Jugador(string nombre);
     Jugador(string nombre, int puntuacion);
 };
 
