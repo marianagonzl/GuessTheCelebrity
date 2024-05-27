@@ -3,7 +3,8 @@
 using namespace sf;
 using namespace std;
 
-int x, y;
+#include "clases.hpp"
+#include "imagen.hpp"
 
 int main()
 {
@@ -11,7 +12,7 @@ int main()
     window.setFramerateLimit(60);
     Texture CelebrityTexture;
 
-    if(!CelebrityTexture.loadFromFile(imagenesNivel1[imagenlol]))
+    if(!CelebrityTexture.loadFromFile(Imagen *img[imagenlol]))
     {
         cout << "Error al cargar imagen" << endl;
     }
@@ -33,7 +34,7 @@ int main()
         void juego();
 
         window.clear(Color(51,51,51));
-        window.draw(imagenesNivel1[imagenlol]->getSprite());
+        window.draw(Imagen *img[imagenlol]->getSprite());
         window.display();
     }
 
