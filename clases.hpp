@@ -9,22 +9,26 @@ using namespace sf;
 
 class Imagen
 {
-private:
+public:
     void random();
-    string resp;
-    string nombreCeleb;
     int x;
     int y;
     Texture textura;
     Sprite sprite;
 
-public:
+
+    string nombreCeleb;
+    string resp;
+    string url;
     string Reglas;
     int oportunidades;
 
     Imagen();
     Imagen(string nombreDeCeleb, string resp, int x, int y);
+    Imagen(string nombreDeCeleb, string url);
+    Imagen(string nombreDeCeleb, string url, Sprite spri);
     void juego (string nombreCeleb, int oportunidades);
+    void drawTo(RenderWindow &window);
 
 };
 
@@ -48,4 +52,7 @@ class Celebridad
 
 };
 
+void Reglas();
+void random();
+void juego(string nombreCeleb, int oportunidades, RenderWindow &window);
 #endif
